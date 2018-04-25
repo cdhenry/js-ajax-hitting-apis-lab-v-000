@@ -27,4 +27,10 @@ function displayCommits() {
   document.getElementById("commits").innerHTML = commitsList
 }
 
+function getBranches() {
 
+}
+
+function displayBranches() {
+
+}
