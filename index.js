@@ -1,3 +1,3 @@
-function getRepositories(){
-  
+function getRepositories() {
+
 }
