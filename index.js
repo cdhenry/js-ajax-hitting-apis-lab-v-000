@@ -27,7 +27,7 @@ function displayCommits() {
   document.getElementById("details").innerHTML = commitsList
 }
 
-function getBranches() {
+function getBranches(el) {
   let username = document.getElementById("username").value
   const name = el.dataset.branch
   const req = new XMLHttpRequest()
