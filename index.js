@@ -6,7 +6,7 @@ function getRepositories() {
   req.send()
 }
 
-function displayRepositories(event, data) {
+function displayRepositories() {
   let repos = JSON.parse(this.responseText)
   const repoList = `<ul>${
     repos.map(r => '<li>' +
