@@ -33,7 +33,7 @@ describe('index', () => {
         var resp = { responseText: reposData() }
         displayRepositories.call(resp)
         el = document.getElementById("repositories")
-        expect(el.innerHTML).toMatch(/Hello-World/)
+        expect(el.innerHTML).toMatch(/hello-world/)
         expect(el.innerHTML).toMatch(/octocat/)
         expect(el.innerHTML).toMatch(/https:\/\/github.com\/octocat\/Hello-World/)
       })
