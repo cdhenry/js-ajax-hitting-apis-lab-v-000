@@ -10,7 +10,7 @@ function displayRepositories() {
   let repos = JSON.parse(this.responseText)
   debugger;
   const repoList = `<ul>${
-    repos.map(r => '<li>' + r.name + `<a href="https://api.github.com/${r.full_name}"></a>` +
+    repos.map(r => `<li><a href="https://api.github.com/${r.full_name}">${r.name}</a>` +
       ' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a> - ' +
       '<a href="#" data-branch="' + r.name + '" onclick="getBranches(this)">Get Branches</a></li>'
     ).join('')
