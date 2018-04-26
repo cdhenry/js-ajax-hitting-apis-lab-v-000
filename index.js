@@ -13,7 +13,6 @@ function displayRepositories(event, data) {
 }
 
 function getCommits(el) {
-  debugger;
   let username = document.getElementById("username").value
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
