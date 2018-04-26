@@ -10,8 +10,8 @@ function displayRepositories() {
   let repos = JSON.parse(this.responseText)
   const repoList = `<ul>${
     repos.map(r => `<li><a href="https://github.com/${r.full_name}">${r.name}</a>` +
-      ' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a> - ' +
-      '<a href="#" data-repo="' + r.name + '" onclick="getBranches(this)">Get Branches</a></li>'
+      ' - <a href="#" data-username="' + r.owner.login + '" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a> - ' +
+      '<a href="#" data-username="' + r.owner.login + '" data-repo="' + r.name + '" onclick="getBranches(this)">Get Branches</a></li>'
     ).join('')
   }</ul>`;
   document.getElementById("repositories").innerHTML = repoList
