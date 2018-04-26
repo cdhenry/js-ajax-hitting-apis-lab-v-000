@@ -22,7 +22,7 @@ function getCommits(el) {
   const repo = el.dataset.repo
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayCommits)
-  req.open("GET", `https://api.github.com/repos/${username}/${name}/commits`)
+  req.open("GET", `https://api.github.com/repos/${username}/${repo}/commits`)
   req.send()
 }
 
