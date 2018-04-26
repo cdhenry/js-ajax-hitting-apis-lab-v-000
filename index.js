@@ -11,7 +11,7 @@ function displayRepositories() {
   const repoList = `<ul>${
     repos.map(r => `<li><a href="https://github.com/${r.full_name}">${r.name}</a>` +
       ' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a> - ' +
-      '<a href="#" data-branch="' + r.name + '" onclick="getBranches(this)">Get Branches</a></li>'
+      '<a href="#" data-repo="' + r.name + '" onclick="getBranches(this)">Get Branches</a></li>'
     ).join('')
   }</ul>`;
   document.getElementById("repositories").innerHTML = repoList
@@ -19,7 +19,7 @@ function displayRepositories() {
 
 function getCommits(el) {
   let username = document.getElementById("username").value
-  let name = el.dataset.repo
+  const name = el.dataset.repo
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayCommits)
   req.open("GET", `https://api.github.com/repos/${username}/${name}/commits`)
